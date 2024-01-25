@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.1.dtd">
+
+<suite name="Regression" parallel="classes" use-global-thread-pool="true" thread-count="1">
+	<test name="Tests">
+		<classes>
+			<class name="e2e.LoginTest"/>
+			<class name="e2e.ShoppingTest"/>
+		</classes>
+	</test>
+</suite>
