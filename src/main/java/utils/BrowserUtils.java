@@ -7,19 +7,19 @@ public class BrowserUtils {
 	public static BrowserType getBrowserTypeFromEnv(Playwright playwright) {
 		String browserType = System.getenv("browser.type");
 
+		// use chromium as default browser
 		if (browserType == null) {
-			// use chromium as default browser
 			return playwright.chromium();
 		}
 
 		return switch (browserType.toLowerCase()) {
 			case "firefox" -> playwright.firefox();
 			case "webkit" -> playwright.webkit();
-			default -> throw new IllegalArgumentException("Tipo de navegador no válido: " + browserType);
+			default -> throw new IllegalArgumentException("The specified browser is not supported: " + browserType);
 		};
 	}
 
-	// validamos si el browser es headed o headless, por default headless = true
+	// default execution mode headless
 	public static boolean isExecutionModeHeadless() {
 		String executionMode = System.getProperty("execution.mode");
 		return !(executionMode != null && executionMode.equalsIgnoreCase("headed"));
