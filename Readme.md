@@ -1,10 +1,10 @@
-# This automation project implements E2E testing using Playwright, Java and maven.
-The demo site used is [atsea-sample-shop-app](https://github.com/dockersamples/atsea-sample-shop-app/).
+# This automation project implements E2E tests using Playwright, Java and maven.
+- The demo site used is [atsea-sample-shop-app](https://github.com/dockersamples/atsea-sample-shop-app/).
+- Docker and docker-compose are needed.
 
 # Configuration
 
 ## Execute tests from Docker
-Docker and docker-compose installed are needed.
 
 "docker-compose" file configures database and application server, and executes tests.
 
