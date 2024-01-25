@@ -1,5 +1,5 @@
 # This automation project implements E2E testing using Playwright, Java and maven.
-The demo site used is [atsea-sample-shop-app] (https://github.com/dockersamples/atsea-sample-shop-app/).
+The demo site used is [atsea-sample-shop-app](https://github.com/dockersamples/atsea-sample-shop-app/).
 
 # Configuration
 
