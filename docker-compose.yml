@@ -35,11 +35,7 @@ services:
         container_name: e2e_tests
         tty: true
         environment:
-            - BASE_URL=http://atsea:8080
-            - BASE_API_URI=http://atsea:8080/api
             - HOST_HAS_GUI=false
-            - browser.type="chromium"
-            - trace.record=true
         depends_on:
             - appserver
         command: sh -c "sleep 14 && mvn test"
