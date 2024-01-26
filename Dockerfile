@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 COPY ./pom.xml ./pom.xml
 COPY ./poc.playwright.iml ./poc.playwright.iml
 COPY ./src/ ./src/
+COPY ./.env ./.env
 
 # execute tests
 CMD ["mvn", "test"]
