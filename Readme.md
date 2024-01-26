@@ -20,7 +20,7 @@ first of all you will need to install project dependencies using maven:
 
 Next, you will need to run the docker compose file to create a simplified development environment consisting only of the application server and database.
 
-`docker-compose -f docker-compose-sample_site_only.yml up -d`
+`docker-compose -f docker-compose-sample-site-only.yml up --build --force-recreate`
 
 ### Browsers
 
