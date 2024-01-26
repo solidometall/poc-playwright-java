@@ -12,7 +12,7 @@ Build and run the containers:
 
 `docker-compose up --build --force-recreate`
 
-## From local env
+## From local environment
 If you want to run tests from your local environment against the sample site,
 first of all you will need to install project dependencies using maven:
 
@@ -22,10 +22,15 @@ Next, you will need to run the docker compose file to create a simplified develo
 
 `docker-compose -f docker-compose-sample_site_only.yml up -d`
 
+### Browsers
+
+Supported browsers are: chromium (default), firefox & webkit.
+
+You can configure the variable `BROWSER.TYPE` in `.env` file.
 
 ### Headed browser
 
-`mvn test -Dexecution.mode="headed"`
+You can configure the variable `EXECUTION.MODE=headed` in `.env` file
 
 ### Debug mode
 
@@ -50,8 +55,8 @@ Playwright supports verbose logging with the DEBUG environment variable.
 
 ### Record execution video
 
-`mvn test -Dvideo.record="true"`
+You can configure the variable `VIDEO.RECORDING=true` in `.env` file
 
 ### Record failed execution trace
 
-`mvn test -Dtrace.record="true"`
+You can configure the variable `TRACE.RECORDING=true` in `.env` file
